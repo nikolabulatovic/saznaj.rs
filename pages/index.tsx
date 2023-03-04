@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
-import { BlockQuote, DoubleImage, YoutubeEmbed } from "components";
-import { fonts } from 'utils';
+import { BlockQuote, DoubleImage, SocialMediaCards, YoutubeEmbed } from "components";
+import { colors, fonts } from 'utils';
 
 const darkColorParagraph = {
   color: '#646464',
@@ -8,6 +8,26 @@ const darkColorParagraph = {
 }
 
 export default function HomePage() {
+  const headingStyle = {
+    fontFamily: 'GothamSSm',
+    fontStyle: 'normal',
+    fontWeight: 700,
+    fontSize: '40px',
+    lineHeight: '102%',
+    textAlign: 'center',
+    color: colors.text.heading,
+  };
+
+  const sectionDescriptionStyle = {
+    fontFamily: 'Roboto',
+    fontStyle: 'normal',
+    fontWeight: 400,
+    fontSize: '13px',
+    lineHeight: '102%',
+    textAlign: 'center',
+    color: colors.text.primary,
+  }
+
   return (
     <Box
       sx={{
@@ -52,6 +72,16 @@ export default function HomePage() {
       <BlockQuote
         content="Životinje nisu naše da sa njima radimo šta god hoćemo."
       />
+
+      <Typography sx={headingStyle}>
+        U dobrom si društvu
+      </Typography>
+
+      <Typography sx={sectionDescriptionStyle}>
+        Vegnanstvo nije sekta, ali prati naše vodiče!
+      </Typography>
+
+      <SocialMediaCards />
     </Box>
   );
 }
