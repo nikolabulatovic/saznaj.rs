@@ -1,12 +1,14 @@
 import { Box, BoxProps } from "@mui/material";
-import React from "react";
 import PropTypes from "prop-types";
+import React from "react";
 
 interface YoutubeEmbed extends BoxProps {
   embedId: string;
 }
 
-export const YoutubeEmbed = ({ embedId, ...boxProps }: YoutubeEmbed) => (
+export const YoutubeEmbed = ({
+  embedId, ...boxProps
+}: YoutubeEmbed) =>
   <Box
     sx={{
       overflow: 'hidden',
@@ -33,8 +35,6 @@ export const YoutubeEmbed = ({ embedId, ...boxProps }: YoutubeEmbed) => (
       title="Embedded youtube"
     />
   </Box>
-);
+;
 
-YoutubeEmbed.propTypes = {
-  embedId: PropTypes.string.isRequired
-};
+YoutubeEmbed.propTypes = { embedId: PropTypes.string.isRequired };

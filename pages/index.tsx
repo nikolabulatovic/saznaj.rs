@@ -13,7 +13,10 @@ export default function HomePage() {
         margin: "auto",
       }}
     >
-      <Box sx={{ margin: "auto", width: "100%" }}>SAZNAJ.RS</Box>
+      <Box sx={{
+        margin: "auto",
+        width: "100%"
+      }}>SAZNAJ.RS</Box>
 
       <YoutubeEmbed embedId="YnONLDo6PWI" />
     </Box>
