@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material";
-import { YoutubeEmbed } from "components";
+import { BlockQuote, YoutubeEmbed } from "components";
 import { fonts } from 'utils';
 
 export default function HomePage() {
@@ -21,6 +21,10 @@ export default function HomePage() {
       <Typography variant='h1'>Ovo ne žele da saznaš.</Typography>
 
       <YoutubeEmbed embedId="YnONLDo6PWI" />
+
+      <BlockQuote
+        content="Životinje nisu naše da sa njima radimo šta god hoćemo."
+      />
     </Box>
   );
 }

@@ -5,9 +5,7 @@ interface AspectRatioBoxProps extends BoxProps {
 }
 
 export const AspectRatioBox = ({
-  children,
-  ratio = 1,
-  sx,
+  children, ratio = 1, sx,
 }: AspectRatioBoxProps) =>
   <Box
     sx={{
