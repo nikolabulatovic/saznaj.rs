@@ -1,5 +1,6 @@
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { YoutubeEmbed } from "components";
+import { fonts } from 'utils';
 
 export default function HomePage() {
   return (
@@ -13,10 +14,11 @@ export default function HomePage() {
         margin: "auto",
       }}
     >
-      <Box sx={{
-        margin: "auto",
-        width: "100%"
-      }}>SAZNAJ.RS</Box>
+      <Typography variant='h2' sx={{ font: fonts.logo }}>
+        SAZNAJ.RS
+      </Typography>
+
+      <Typography variant='h1'>Ovo ne žele da saznaš.</Typography>
 
       <YoutubeEmbed embedId="YnONLDo6PWI" />
     </Box>
