@@ -64,3 +64,22 @@ export const socialMediaCards: Array<SocialMediaCardInfo> = [
     link: 'https://www.facebook.com/groups/124940954856880',
   }
 ];
+
+export interface TakeActionInfo {
+  image: string;
+  link: string;
+  name: string;
+}
+
+export const takeActionBanners = [
+  {
+    image: 'govegan.jpg',
+    link: 'https://govegan.rs/',
+    name: 'Go Vegan',
+  },
+  {
+    image: 'veganizazov.jpg',
+    link: 'https://vegan-izazov22.com/',
+    name: 'Vegan Izazov 22',
+  }
+]

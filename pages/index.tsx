@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material";
-import { BlockQuote, DoubleImage, SocialMediaCards, YoutubeEmbed } from "components";
+import { BlockQuote, DoubleImage, SocialMediaCards, TakeAction, YoutubeEmbed } from "components";
 import { colors, fonts } from 'utils';
 
 const darkColorParagraph = {
@@ -72,6 +72,20 @@ export default function HomePage() {
       <BlockQuote
         content="Životinje nisu naše da sa njima radimo šta god hoćemo."
       />
+
+      <Typography sx={headingStyle}>
+        Pogledaj
+      </Typography>
+
+      <Typography sx={headingStyle}>
+        Napravi korak
+      </Typography>
+
+      <Typography sx={sectionDescriptionStyle}>
+        Prelazak na veganstvo je najveći poduhvat koji možemo napraviti za naše zdravlje, okolinu i etiku
+      </Typography>
+
+      <TakeAction />
 
       <Typography sx={headingStyle}>
         U dobrom si društvu

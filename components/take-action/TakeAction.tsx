@@ -1,0 +1,37 @@
+import { Box } from "@mui/material"
+import Image from "next/image"
+import Link from "next/link"
+import { takeActionBanners, TakeActionInfo } from "utils"
+
+export const TakeAction = () => {
+  return (
+    <Box sx={{
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 0.75,
+    }}>
+      {takeActionBanners.map(({
+        link, image, name
+      }: TakeActionInfo) =>
+        <Box key={name} sx={{
+          position: 'relative',
+          height: '69px'
+        }}>
+          <Link href={link} target="_blank">
+            <Box sx={{
+              width: '100%',
+              height: '69px',
+              position: "absolute",
+            }}>
+              <Image
+                src={image}
+                alt={name}
+                layout="fill"
+                unoptimized={true}
+              />
+            </Box>
+          </Link>
+        </Box>)}
+    </Box>
+  )
+}
