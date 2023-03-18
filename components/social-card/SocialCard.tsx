@@ -1,10 +1,11 @@
 import { Box, Typography } from '@mui/material';
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react'
 import { colors, socialMedia, SocialMediaCardInfo, socialMediaCards, SocialMediaType } from 'utils';
 
 const SocialCard = ({
-  description, name, link
+  description, name, link, image
 } : SocialMediaCardInfo) => {
   return (
     <Link
@@ -12,17 +13,29 @@ const SocialCard = ({
       target="_blank"
     >
       <Box sx={{
-        padding: '4px 9px',
-        width: '125px',
-        height: '125px',
-        border: '1px solid #000000',
-        bgcolor: colors.socialCard,
+        width: '113px',
+        height: '113px',
+        border: '6px solid #000000',
         position: 'relative',
-        boxSizing: 'border-box',
       }}>
         <Box sx={{
+          width: '113px',
+          height: '113px',
+          position: "absolute",
+          opacity: '0.33',
+        }}>
+          <Image
+            src={image}
+            alt={name}
+            layout="fill"
+            unoptimized={true}
+          />
+        </Box>
+
+        <Box sx={{
           position: 'absolute',
-          bottom: '0px'
+          bottom: '5px',
+          left: '7px',
         }}>
           <Typography sx={{
             fontFamily: 'GothamSSm',
@@ -31,7 +44,7 @@ const SocialCard = ({
             fontSize: '14px',
             lineHeight: '17px',
             color: colors.text.socialCardName,
-          }}>{name}</Typography>
+          }}>{name.toUpperCase()}</Typography>
 
           <Typography sx={{
             fontFamily: 'GothamSSm',
@@ -42,7 +55,7 @@ const SocialCard = ({
             letterSpacing: '0.06em',
             color: colors.text.socialCardName,
           }}>
-            {description}
+            {description.toUpperCase()}
           </Typography>
         </Box>
       </Box>
