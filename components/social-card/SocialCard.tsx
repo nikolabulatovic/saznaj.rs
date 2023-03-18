@@ -1,12 +1,16 @@
 import { Box, Typography } from '@mui/material';
+import Link from 'next/link';
 import React from 'react'
 import { colors, socialMedia, SocialMediaCardInfo, socialMediaCards, SocialMediaType } from 'utils';
 
 const SocialCard = ({
-  description, name
+  description, name, link
 } : SocialMediaCardInfo) => {
   return (
-    <React.Fragment>
+    <Link
+      href={link}
+      target="_blank"
+    >
       <Box sx={{
         padding: '4px 9px',
         width: '125px',
@@ -42,7 +46,7 @@ const SocialCard = ({
           </Typography>
         </Box>
       </Box>
-    </React.Fragment>
+    </Link>
   );
 }
 
