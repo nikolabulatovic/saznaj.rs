@@ -34,7 +34,7 @@ export default function HomePage() {
         display: "flex",
         flexDirection: "column",
         gap: 4,
-        maxWidth: "900px",
+        maxWidth: "375px",
         width: "100%",
         margin: "auto",
       }}
