@@ -14,6 +14,7 @@ const darkColorParagraph = {
   lineHeight: '18px',
   letterSpacing: '0.03em',
   margin: '0px 16.32px 0px 22.94px',
+  userSelect: 'none',
 }
 
 export default function HomePage() {
@@ -25,6 +26,7 @@ export default function HomePage() {
     lineHeight: '102%',
     textAlign: 'center',
     color: colors.text.heading,
+    userSelect: 'none',
   };
 
   const heading2Style = {
@@ -37,6 +39,7 @@ export default function HomePage() {
     letterSpacing: '0.01em',
     textTransform: 'uppercase',
     color: colors.text.heading,
+    userSelect: 'none',
   };
 
   const sectionDescriptionStyle = {
@@ -49,6 +52,7 @@ export default function HomePage() {
     letterSpacing: '0.03em',
     color: colors.text.sectionDescription,
     margin: '0px 6.55px 0px 6.55px',
+    userSelect: 'none',
   }
 
   return (
@@ -178,6 +182,7 @@ export default function HomePage() {
           textAlign: 'center',
           letterSpacing: '0.05em',
           color: colors.text.acknowledgementsHeading,
+          userSelect: 'none',
         }}
       >
         DIZAJNIRANO U BEOGRADU®
@@ -193,6 +198,7 @@ export default function HomePage() {
         letterSpacing: '0.17em',
         color: colors.text.acknowledgementsContent,
         marginBottom: '90.22px',
+        userSelect: 'none',
       }}>
         Autori pomenutih sadžaja nisu afilisani sa saznaj.rs.
       </Typography>

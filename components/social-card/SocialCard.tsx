@@ -5,8 +5,16 @@ import React from 'react'
 import { colors, socialMedia, SocialMediaCardInfo, socialMediaCards, SocialMediaType } from 'utils';
 
 const SocialCard = ({
-  description, name, link, image
+  description, name, link, image, isDiagonal
 } : SocialMediaCardInfo) => {
+  const rotatedSx = {
+    transform: 'rotate(-45deg)',
+    transformOrigin: 'left',
+    left: '4px',
+    top: '3px',
+    position: 'relative',
+  };
+
   return (
     <Link
       href={link}
@@ -23,6 +31,7 @@ const SocialCard = ({
           height: '113px',
           position: "absolute",
           opacity: '0.33',
+          "& img": { objectFit: 'cover' }
         }}>
           <Image
             src={image}
@@ -37,15 +46,21 @@ const SocialCard = ({
           bottom: '5px',
           left: '7px',
         }}>
-          <Typography sx={{
-            fontFamily: 'GothamSSm Bold',
-            fontStyle: 'normal',
-            fontWeight: 700,
-            fontSize: '14px',
-            lineHeight: '17px',
-            color: colors.text.socialCardName,
-            textTransform: 'uppercase',
-          }}>{name}</Typography>
+          <Typography
+            sx={{
+              fontFamily: 'GothamSSm Bold',
+              fontStyle: 'normal',
+              fontWeight: 700,
+              fontSize: '14px',
+              lineHeight: '17px',
+              color: colors.text.socialCardName,
+              textTransform: 'uppercase',
+              userSelect: 'none',
+              ...isDiagonal ? rotatedSx : {}
+            }}
+          >
+            {name}
+          </Typography>
 
           <Typography sx={{
             fontFamily: 'GothamSSm Bold',
@@ -56,6 +71,7 @@ const SocialCard = ({
             letterSpacing: '0.06em',
             color: colors.text.socialCardName,
             textTransform: 'uppercase',
+            userSelect: 'none',
           }}>
             {description}
           </Typography>
@@ -86,6 +102,7 @@ const SocialCardsGroup = ({ type } : SocialCardsGroupProps) => {
         margin: 'auto',
         marginBottom: '8.14px',
         textTransform: 'uppercase',
+        userSelect: 'none',
       }}>
         {type}
       </Typography>

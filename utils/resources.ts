@@ -7,6 +7,7 @@ export interface SocialMediaCardInfo {
   type: SocialMediaType;
   link: string;
   image: string;
+  isDiagonal?: boolean;
 }
 
 export const socialMediaCards: Array<SocialMediaCardInfo> = [
@@ -44,6 +45,7 @@ export const socialMediaCards: Array<SocialMediaCardInfo> = [
     type: 'Instagram',
     link: 'https://www.instagram.com/veganjamcije/',
     image: 'veganjamcije.jpg',
+    isDiagonal: true,
   },
   {
     name: 'Moja Vegan Kuhinja',
