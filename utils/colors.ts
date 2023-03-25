@@ -13,4 +13,10 @@ export const colors = {
     acknowledgementsHeading: '#443433',
     acknowledgementsContent: '#554746',
   },
+  slider: {
+    buttonClickTransitionColor: '#ffffff3d',
+    activeButton: '#565656',
+    slideHeader: 'rgba(202, 195, 182, 1)',
+    slideSubtext: 'rgb(175 169 157 / 91%)',
+  },
 };

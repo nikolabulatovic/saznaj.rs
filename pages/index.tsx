@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material";
-import { BlockQuote, CustomVideo, DoubleImage, Logo, SocialMediaCards, TakeAction, YoutubeEmbed } from "components";
+import { AspectRatioBox, BlockQuote, Carousel, CustomVideo, DoubleImage, Logo, SocialMediaCards, TakeAction, YoutubeEmbed } from "components";
 import { colors } from 'utils';
 
 import styles from "./index.module.css";
@@ -80,23 +80,31 @@ export default function HomePage() {
     >
       <Logo
         style={{
-          margin: "auto",
-          marginTop: "38.31px",
-          marginBottom: "40.69px",
+          margin: 'auto',
+          marginTop: '38.31px',
+          marginBottom: '40.69px',
         }}
       />
 
-      <Typography variant='h1' className={styles.h1} sx={{
-        ...heading1Style,
-        marginBottom: '35px'
-      }}>Ovo ne žele<br/>da saznaš.</Typography>
+      <Typography
+        variant='h1'
+        className={styles.h1}
+        sx={{
+          ...heading1Style,
+          marginBottom: '35px',
+        }}>
+        Ovo ne žele
+        <br />
+        da saznaš.
+      </Typography>
 
-      <Box sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        gap: '12.98px',
-        marginBottom: '27.36px',
-      }}>
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '12.98px',
+          marginBottom: '27.36px',
+        }}>
         <DoubleImage
           url1='1.png'
           url2='2.png'
@@ -104,8 +112,8 @@ export default function HomePage() {
         />
 
         <Typography sx={darkColorParagraph}>
-        U industrijama u kojima se životinje iskorišćavaju, nikad nam nije
-        prikazana istina o njihovim životima.
+          U industrijama u kojima se životinje iskorišćavaju, nikad nam nije
+          prikazana istina o njihovim životima.
         </Typography>
 
         <DoubleImage
@@ -115,20 +123,20 @@ export default function HomePage() {
         />
 
         <Typography sx={darkColorParagraph}>
-        Baš kao tvoj pas ili mačka, životinje u industrijama mesa, mleka i
-        jaja osećaju bol i ne žele da budu nepravedno ubijene.{' '}
+          Baš kao tvoj pas ili mačka, životinje u industrijama mesa, mleka i
+          jaja osećaju bol i ne žele da budu nepravedno ubijene.{' '}
           <strong>Životinje nisu naše da sa njima radimo šta god hoćemo</strong>
-        .
+          .
         </Typography>
 
-        <CustomVideo
-          video={<YoutubeEmbed embedId="YnONLDo6PWI" />}
-        />
+        <CustomVideo video={<YoutubeEmbed embedId='YnONLDo6PWI' />}>
+          <AspectRatioBox ratio={16 / 9} sx={{}}>
+            <img src='gary.jpg' alt='Najbolji govor koji ćeš ikada čuti' />
+          </AspectRatioBox>
+        </CustomVideo>
       </Box>
 
-      <BlockQuote
-        content="Životinje nisu naše da sa njima radimo šta god hoćemo."
-      />
+      <BlockQuote content='Životinje nisu naše da sa njima radimo šta god hoćemo.' />
 
       <Typography sx={{
         ...heading3Style,
@@ -138,27 +146,33 @@ export default function HomePage() {
         Dokumentarci
       </Typography>
 
-      <Typography sx={{
-        ...heading2Style,
-        marginTop: '95.39px',
-        marginBottom: '10px'
-      }}>
+      <Carousel />
+
+      <Typography
+        sx={{
+          ...heading2Style,
+          marginTop: '95.39px',
+          marginBottom: '10px',
+        }}>
         Napravi korak
       </Typography>
 
-      <Typography sx={{
-        ...sectionDescriptionStyle,
-        marginBottom: '13.75px'
-      }}>
-        Prelazak na veganstvo je najveći poduhvat koji možemo napraviti za naše zdravlje, okolinu i savest
+      <Typography
+        sx={{
+          ...sectionDescriptionStyle,
+          marginBottom: '13.75px',
+        }}>
+        Prelazak na veganstvo je najveći poduhvat koji možemo napraviti za naše
+        zdravlje, okolinu i savest
       </Typography>
 
-      <TakeAction sx={{ marginBottom: '103.97px' }}/>
+      <TakeAction sx={{ marginBottom: '103.97px' }} />
 
-      <Typography sx={{
-        ...heading2Style,
-        marginBottom: '10.56px'
-      }}>
+      <Typography
+        sx={{
+          ...heading2Style,
+          marginBottom: '10.56px',
+        }}>
         U dobrom si društvu
       </Typography>
 
@@ -166,13 +180,15 @@ export default function HomePage() {
         Vegnanstvo nije sekta, ali prati naše vodiče!
       </Typography>
 
-      <SocialMediaCards sx={{
-        marginTop: '28.55px',
-        marginBottom: '71.88px'
-      }} />
+      <SocialMediaCards
+        sx={{
+          marginTop: '28.55px',
+          marginBottom: '71.88px',
+        }}
+      />
 
       <BlockQuote
-        content="Životinje nisu naše da sa njima radimo šta god hoćemo."
+        content='Životinje nisu naše da sa njima radimo šta god hoćemo.'
         sx={{ marginBottom: '154.92px' }}
       />
 
@@ -180,8 +196,8 @@ export default function HomePage() {
         width='101.47px'
         height='13.02px'
         style={{
-          margin: "auto",
-          marginBottom: "31.88px",
+          margin: 'auto',
+          marginBottom: '31.88px',
         }}
       />
 

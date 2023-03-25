@@ -1,3 +1,5 @@
+@import 'node_modules/@glidejs/glide/src/assets/sass/glide.core';
+
 :root {
   --max-width: 1100px;
   --border-radius: 12px;

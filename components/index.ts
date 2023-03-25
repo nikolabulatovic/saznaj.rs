@@ -1,5 +1,6 @@
 export * from './aspect-ratio-box';
 export * from './block-quote';
+export * from './carousel';
 export * from './custom-video';
 export * from './double-image';
 export * from './icons';
