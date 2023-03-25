@@ -3,6 +3,24 @@ import { colors } from 'utils';
 
 const scriptTxt = `
 (function () {
+  function scalePage() {
+    const element = document.getElementById('page');
+    if (element) {
+      const windowWidth = window.innerWidth;
+      const maxFactor = 1.6;
+
+      const refWidth = 375;
+      const refFactor = 1;
+
+      let scaleFactor = windowWidth / refWidth * refFactor;
+      if (scaleFactor > maxFactor) {
+        scaleFactor = maxFactor;
+      }
+
+      element.style.zoom = scaleFactor;
+    }
+  }
+
   document.addEventListener(
     'contextmenu',
     event => event.preventDefault()
@@ -11,6 +29,7 @@ const scriptTxt = `
   window.addEventListener(
     'load',
     event => {
+      scalePage();
       setTimeout(
         () => {
           const element = document.getElementById('cover');
@@ -20,6 +39,13 @@ const scriptTxt = `
         },
         2000
       )
+    }
+  );
+
+  window.addEventListener(
+    'resize',
+    event => {
+      scalePage()
     }
   );
 })();

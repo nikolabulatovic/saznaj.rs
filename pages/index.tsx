@@ -42,6 +42,18 @@ export default function HomePage() {
     userSelect: 'none',
   };
 
+  const heading3Style = {
+    fontFamily: 'GothamSSm Bold',
+    fontStyle: 'normal',
+    fontWeight: 700,
+    fontSize: '34px',
+    lineHeight: '102%',
+    textAlign: 'center',
+    color: colors.text.heading,
+    userSelect: 'none',
+    textTransform: 'uppercase',
+  };
+
   const sectionDescriptionStyle = {
     fontFamily: 'Bio Sans',
     fontStyle: 'normal',
@@ -57,12 +69,14 @@ export default function HomePage() {
 
   return (
     <Box
+      id="page"
       sx={{
         display: "flex",
         flexDirection: "column",
         maxWidth: "375px",
         width: "100%",
         margin: "auto",
+        transformOrigin: 'top',
       }}
     >
       <Logo
@@ -118,7 +132,7 @@ export default function HomePage() {
       />
 
       <Typography sx={{
-        ...heading1Style,
+        ...heading3Style,
         marginTop: '89.67px',
         marginBottom: '13.79px',
       }}>

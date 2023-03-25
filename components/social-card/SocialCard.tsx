@@ -1,7 +1,7 @@
 import { Box, BoxProps, Typography } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react'
+import React, { useMemo } from 'react'
 import { colors, socialMedia, SocialMediaCardInfo, socialMediaCards, SocialMediaType } from 'utils';
 
 const SocialCard = ({
@@ -21,17 +21,21 @@ const SocialCard = ({
       target="_blank"
     >
       <Box sx={{
-        width: '113px',
-        height: '113px',
-        border: '6px solid #000000',
+        width: '118px',
+        height: '118px',
         position: 'relative',
       }}>
         <Box sx={{
-          width: '113px',
-          height: '113px',
+          width: '118px',
+          height: '118px',
           position: "absolute",
           opacity: '0.33',
-          "& img": { objectFit: 'cover' }
+          "& img": {
+            objectFit: 'cover',
+            paddingLeft: '3px',
+            paddingTop: '3px',
+            boxSizing: 'border-box'
+          }
         }}>
           <Image
             src={image}
@@ -86,6 +90,18 @@ interface SocialCardsGroupProps {
 }
 
 const SocialCardsGroup = ({ type } : SocialCardsGroupProps) => {
+  const cards = useMemo(
+    () => {
+      const filtered = socialMediaCards.filter((card: SocialMediaCardInfo) => card.type === type);
+      const cardsOrganized : Array<[SocialMediaCardInfo, SocialMediaCardInfo, SocialMediaCardInfo]> = [];
+      for (let i = 0; i < filtered.length; i += 3) {
+        cardsOrganized.push([filtered[i], filtered[i + 1], filtered[i + 2]]);
+      }
+      return cardsOrganized;
+    },
+    [type]
+  );
+
   return (
     <Box sx={{
       display: 'flex',
@@ -109,12 +125,25 @@ const SocialCardsGroup = ({ type } : SocialCardsGroupProps) => {
 
       <Box sx={{
         display: 'flex',
+        flexDirection: 'column',
         flexWrap: 'wrap',
       }}>
-        {socialMediaCards.filter((card: SocialMediaCardInfo) => card.type === type).map((
-          card: SocialMediaCardInfo, index: number
+        {cards.map((
+          [card1, card2, card3]: [SocialMediaCardInfo, SocialMediaCardInfo, SocialMediaCardInfo], index: number
         ) =>
-          <SocialCard key={index} {...card} />)}
+          <Box key={index} sx={{ display: 'flex' }}>
+            {card1 &&
+            <SocialCard {...card1} />
+            }
+
+            {card2 &&
+            <SocialCard {...card2} />
+            }
+
+            {card3 &&
+            <SocialCard {...card3} />
+            }
+          </Box>)}
       </Box>
     </Box>
   )
