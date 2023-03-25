@@ -16,7 +16,7 @@ export const BlockQuote = ({
     fontSize: '28px',
     lineHeight: '102%',
     textAlign: 'center',
-    width: '221px',
+    width: '231.43px',
     margin: 'auto',
     color: colors.text.heading,
     userSelect: 'none',
