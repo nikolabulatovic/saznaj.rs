@@ -98,6 +98,7 @@ export default function Document() {
             opacity: 0;
             animation-name: custom-fadein;
             animation-duration: 2s;
+            pointer-events: none;
           }
         `}</style>
         <meta name="theme-color" content="#272020"/>
