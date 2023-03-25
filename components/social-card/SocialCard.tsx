@@ -55,6 +55,7 @@ const SocialCard = ({
               lineHeight: '17px',
               color: colors.text.socialCardName,
               textTransform: 'uppercase',
+              userSelect: 'none',
               ...isDiagonal ? rotatedSx : {}
             }}
           >
@@ -70,6 +71,7 @@ const SocialCard = ({
             letterSpacing: '0.06em',
             color: colors.text.socialCardName,
             textTransform: 'uppercase',
+            userSelect: 'none',
           }}>
             {description}
           </Typography>
@@ -100,6 +102,7 @@ const SocialCardsGroup = ({ type } : SocialCardsGroupProps) => {
         margin: 'auto',
         marginBottom: '8.14px',
         textTransform: 'uppercase',
+        userSelect: 'none',
       }}>
         {type}
       </Typography>

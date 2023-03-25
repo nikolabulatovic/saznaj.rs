@@ -19,6 +19,7 @@ export const BlockQuote = ({
     width: '221px',
     margin: 'auto',
     color: colors.text.heading,
+    userSelect: 'none',
   }
 
   return (
