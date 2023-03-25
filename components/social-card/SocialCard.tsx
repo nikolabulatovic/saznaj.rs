@@ -5,8 +5,16 @@ import React from 'react'
 import { colors, socialMedia, SocialMediaCardInfo, socialMediaCards, SocialMediaType } from 'utils';
 
 const SocialCard = ({
-  description, name, link, image
+  description, name, link, image, isDiagonal
 } : SocialMediaCardInfo) => {
+  const rotatedSx = {
+    transform: 'rotate(-45deg)',
+    transformOrigin: 'left',
+    left: '4px',
+    top: '3px',
+    position: 'relative',
+  };
+
   return (
     <Link
       href={link}
@@ -38,15 +46,20 @@ const SocialCard = ({
           bottom: '5px',
           left: '7px',
         }}>
-          <Typography sx={{
-            fontFamily: 'GothamSSm Bold',
-            fontStyle: 'normal',
-            fontWeight: 700,
-            fontSize: '14px',
-            lineHeight: '17px',
-            color: colors.text.socialCardName,
-            textTransform: 'uppercase',
-          }}>{name}</Typography>
+          <Typography
+            sx={{
+              fontFamily: 'GothamSSm Bold',
+              fontStyle: 'normal',
+              fontWeight: 700,
+              fontSize: '14px',
+              lineHeight: '17px',
+              color: colors.text.socialCardName,
+              textTransform: 'uppercase',
+              ...isDiagonal ? rotatedSx : {}
+            }}
+          >
+            {name}
+          </Typography>
 
           <Typography sx={{
             fontFamily: 'GothamSSm Bold',
