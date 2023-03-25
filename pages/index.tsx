@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material";
-import { BlockQuote, DoubleImage, SocialMediaCards, TakeAction, YoutubeEmbed } from "components";
+import { BlockQuote, DoubleImage, Logo, SocialMediaCards, TakeAction, YoutubeEmbed } from "components";
 import { colors, fonts } from 'utils';
 
 import styles from "./index.module.css";
@@ -60,9 +60,13 @@ export default function HomePage() {
         margin: "auto",
       }}
     >
-      <Typography variant='h2' sx={{ font: fonts.logo }}>
-        SAZNAJ.RS
-      </Typography>
+      <Logo
+        style={{
+          margin: "auto",
+          marginTop: "38.31px",
+          marginBottom: "40.69px",
+        }}
+      />
 
       <Typography variant='h1' className={styles.h1} sx={{
         ...heading1Style,
@@ -148,6 +152,15 @@ export default function HomePage() {
       <BlockQuote
         content="Životinje nisu naše da sa njima radimo šta god hoćemo."
         sx={{ marginBottom: '154.92px' }}
+      />
+
+      <Logo
+        width='101.47px'
+        height='13.02px'
+        style={{
+          margin: "auto",
+          marginBottom: "31.88px",
+        }}
       />
 
       <Typography
