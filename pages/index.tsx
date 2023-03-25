@@ -1,6 +1,5 @@
 import { Box, Typography } from "@mui/material";
-import { BlockQuote, DoubleImage, Logo, SocialMediaCards, TakeAction, YoutubeEmbed } from "components";
-import { CustomVideo } from "components/custom-video";
+import { BlockQuote, CustomVideo, DoubleImage, Logo, SocialMediaCards, TakeAction, YoutubeEmbed } from "components";
 import { colors } from 'utils';
 
 import styles from "./index.module.css";
