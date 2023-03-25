@@ -1,11 +1,15 @@
 import { Box, Typography } from '@mui/material';
 import { AspectRatioBox } from 'components';
-import { useState } from 'react'
+import Image from 'next/image';
+import { CSSProperties, useState } from 'react'
 import { colors } from 'utils';
+
+import styles from './DoubleImage.module.css';
 
 interface DoubleImageProps {
   url1: string;
   url2: string;
+  background: CSSProperties['background'];
 }
 
 const containerStyle = {
@@ -20,7 +24,6 @@ const itemStyle = {
 
 const overlay = {
   backdropFilter: 'blur(16px)',
-  background: 'rgba(29, 28, 46, 0.9)',
   bottom: '0',
   cursor: 'pointer',
   left: '0',
@@ -28,7 +31,7 @@ const overlay = {
   right: '0',
   top: '0',
   zIndex: 1,
-};
+}
 
 const textOverlay = {
   fontFamily: 'ABChanel Corpo',
@@ -60,20 +63,25 @@ const textOverlay = {
 };
 
 export const DoubleImage = ({
-  url1, url2
+  url1, url2, background
 }: DoubleImageProps) => {
   const [showImage, setShowImage] = useState(false)
 
   return (
     <Box sx={containerStyle}>
       <AspectRatioBox sx={itemStyle}>
-        <img alt='Happy cow' src={url1} />
+        <Image
+          src={url1}
+          alt='1'
+          layout="fill"
+          unoptimized={true}
+        />
       </AspectRatioBox>
       <Box onClick={() => setShowImage(true)} sx={itemStyle}>
         <Box sx={{
           ...overlay,
-          display: showImage ? 'none' : undefined
-        }} />
+          background
+        }} className={showImage ? styles.shown : styles.hidden}/>
         <Typography
           sx={{
             ...textOverlay,
@@ -82,7 +90,12 @@ export const DoubleImage = ({
           Klikni da saznaš
         </Typography>
         <AspectRatioBox>
-          <img alt='Sad cow' src={url2} />
+          <Image
+            src={url2}
+            alt='2'
+            layout="fill"
+            unoptimized={true}
+          />
         </AspectRatioBox>
       </Box>
     </Box>

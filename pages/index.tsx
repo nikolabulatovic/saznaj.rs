@@ -80,8 +80,9 @@ export default function HomePage() {
         marginBottom: '27.36px',
       }}>
         <DoubleImage
-          url1='https://i.imgflip.com/1knrg9.jpg'
-          url2='https://i.imgflip.com/1knrg9.jpg'
+          url1='1.png'
+          url2='2.png'
+          background='rgba(29, 28, 46, 0.9)'
         />
 
         <Typography sx={darkColorParagraph}>
@@ -90,8 +91,9 @@ export default function HomePage() {
         </Typography>
 
         <DoubleImage
-          url1='https://i.imgflip.com/1knrg9.jpg'
-          url2='https://i.imgflip.com/1knrg9.jpg'
+          url1='3.png'
+          url2='4.png'
+          background='rgba(43, 41, 38, 0.9)'
         />
 
         <Typography sx={darkColorParagraph}>
