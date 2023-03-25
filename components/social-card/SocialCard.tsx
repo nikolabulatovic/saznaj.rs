@@ -23,6 +23,7 @@ const SocialCard = ({
           height: '113px',
           position: "absolute",
           opacity: '0.33',
+          "& img": { objectFit: 'cover' }
         }}>
           <Image
             src={image}
