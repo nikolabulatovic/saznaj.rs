@@ -4,7 +4,9 @@ import { colors } from 'utils';
 export default function Document() {
   return (
     <Html lang='en'>
-      <Head />
+      <Head>
+        <meta name="theme-color" content="#272020"/>
+      </Head>
       <body
         style={{
           backgroundColor: colors.background,
