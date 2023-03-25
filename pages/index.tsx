@@ -1,6 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import { BlockQuote, DoubleImage, Logo, SocialMediaCards, TakeAction, YoutubeEmbed } from "components";
-import { colors, fonts } from 'utils';
+import { CustomVideo } from "components/custom-video";
+import { colors } from 'utils';
 
 import styles from "./index.module.css";
 
@@ -103,7 +104,9 @@ export default function HomePage() {
         .
         </Typography>
 
-        <YoutubeEmbed embedId="YnONLDo6PWI" />
+        <CustomVideo
+          video={<YoutubeEmbed embedId="YnONLDo6PWI" />}
+        />
       </Box>
 
       <BlockQuote
