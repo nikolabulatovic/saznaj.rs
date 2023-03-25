@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material';
+import { Box, BoxProps, Typography } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react'
@@ -38,24 +38,26 @@ const SocialCard = ({
           left: '7px',
         }}>
           <Typography sx={{
-            fontFamily: 'GothamSSm',
+            fontFamily: 'GothamSSm Bold',
             fontStyle: 'normal',
             fontWeight: 700,
             fontSize: '14px',
             lineHeight: '17px',
             color: colors.text.socialCardName,
-          }}>{name.toUpperCase()}</Typography>
+            textTransform: 'uppercase',
+          }}>{name}</Typography>
 
           <Typography sx={{
-            fontFamily: 'GothamSSm',
+            fontFamily: 'GothamSSm Bold',
             fontStyle: 'normal',
-            fontWeight: 400,
+            fontWeight: 700,
             fontSize: '8px',
             lineHeight: '10px',
             letterSpacing: '0.06em',
             color: colors.text.socialCardName,
+            textTransform: 'uppercase',
           }}>
-            {description.toUpperCase()}
+            {description}
           </Typography>
         </Box>
       </Box>
@@ -69,18 +71,23 @@ interface SocialCardsGroupProps {
 
 const SocialCardsGroup = ({ type } : SocialCardsGroupProps) => {
   return (
-    <Box>
+    <Box sx={{
+      display: 'flex',
+      flexDirection: 'column'
+    }}>
       <Typography sx={{
-        fontFamily: 'Bio Sans',
+        fontFamily: 'GothamSSm Bold',
         fontStyle: 'normal',
-        fontWeight: 400,
-        fontSize: '10px',
-        lineHeight: '12px',
+        fontWeight: 700,
+        fontSize: '16px',
+        lineHeight: '19px',
         letterSpacing: '0.06em',
         color: colors.text.socialCardType,
-        margin: '5px 27px',
+        margin: 'auto',
+        marginBottom: '8.14px',
+        textTransform: 'uppercase',
       }}>
-        {type.toUpperCase()}
+        {type}
       </Typography>
 
       <Box sx={{
@@ -96,12 +103,13 @@ const SocialCardsGroup = ({ type } : SocialCardsGroupProps) => {
   )
 }
 
-export const SocialMediaCards = () => {
+export const SocialMediaCards = ({ sx }: BoxProps) => {
   return (
     <Box sx={{
       display: 'flex',
       flexDirection: 'column',
       gap: 4,
+      ...sx,
     }}>
       {socialMedia.map((type: SocialMediaType) =>
         <SocialCardsGroup key={type} type={type} />)}

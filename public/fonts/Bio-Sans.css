@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Bio Sans';
+  src: url('./Bio-Sans-Regular.otf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bio Sans Bold';
+  src: url('./Bio-Sans-Bold.otf');
+  font-style: normal;
+}

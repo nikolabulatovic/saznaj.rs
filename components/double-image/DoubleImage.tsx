@@ -1,6 +1,7 @@
 import { Box, Typography } from '@mui/material';
 import { AspectRatioBox } from 'components';
 import { useState } from 'react'
+import { colors } from 'utils';
 
 interface DoubleImageProps {
   url1: string;
@@ -30,6 +31,17 @@ const overlay = {
 };
 
 const textOverlay = {
+  fontFamily: 'ABChanel Corpo',
+  fontStyle: 'normal',
+  fontWeight: 600,
+  fontSize: '9px',
+  lineHeight: '16px',
+  display: 'flex',
+  alignItems: 'center',
+  textAlign: 'center',
+  letterSpacing: '0.1em',
+  color: colors.text.clickToFindOut,
+  whiteSpace: 'nowrap',
   cursor: 'pointer',
   margin: {
     left: '50%',

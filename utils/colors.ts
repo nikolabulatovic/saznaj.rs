@@ -6,7 +6,11 @@ export const colors = {
     dark: '#000000',
     heading: '#AFABAA',
     primary: '#FFFFFF',
-    socialCardType: '#AEAEAE',
+    socialCardType: '#5E5857',
     socialCardName: '#AEAEAE',
+    clickToFindOut: '#9593B659',
+    sectionDescription: '#837676',
+    acknowledgementsHeading: '#443433',
+    acknowledgementsContent: '#554746',
   },
 };

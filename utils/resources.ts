@@ -12,14 +12,14 @@ export interface SocialMediaCardInfo {
 export const socialMediaCards: Array<SocialMediaCardInfo> = [
   {
     name: 'Vegan Izazov 22',
-    description: 'Probaj',
+    description: '',
     type: 'Instagram',
     link: 'https://www.instagram.com/veganizazov22/',
     image: 'veganizazov22.jpg',
   },
   {
     name: 'Misli svojom glavom',
-    description: 'Lični blog',
+    description: '',
     type: 'Instagram',
     link: 'https://www.instagram.com/misli_svojom_glavom_/',
     image: 'mislisvojomglavom.jpg',
@@ -33,7 +33,7 @@ export const socialMediaCards: Array<SocialMediaCardInfo> = [
   },
   {
     name: 'Vege zajednica',
-    description: 'Udruženje',
+    description: '',
     type: 'Instagram',
     link: 'https://www.instagram.com/vegezajednica_/',
     image: 'vegezajednica.jpg',
@@ -160,13 +160,13 @@ export interface TakeActionInfo {
 
 export const takeActionBanners = [
   {
+    image: 'veganizazov.jpg',
+    link: 'https://vegan-izazov22.com/',
+    name: 'Vegan Izazov 22',
+  },
+  {
     image: 'govegan.jpg',
     link: 'https://govegan.rs/',
     name: 'Go Vegan',
   },
-  {
-    image: 'veganizazov.jpg',
-    link: 'https://vegan-izazov22.com/',
-    name: 'Vegan Izazov 22',
-  }
 ]

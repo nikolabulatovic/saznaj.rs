@@ -1,14 +1,15 @@
-import { Box } from "@mui/material"
+import { Box, BoxProps } from "@mui/material"
 import Image from "next/image"
 import Link from "next/link"
 import { takeActionBanners, TakeActionInfo } from "utils"
 
-export const TakeAction = () => {
+export const TakeAction = ({ sx }: BoxProps) => {
   return (
     <Box sx={{
       display: 'flex',
       flexDirection: 'column',
       gap: 0.75,
+      ...sx,
     }}>
       {takeActionBanners.map(({
         link, image, name

@@ -1,32 +1,24 @@
-import { Box, Typography } from '@mui/material';
+import { Box, BoxProps, Typography } from '@mui/material';
 import React from 'react';
 import { colors } from 'utils';
 
-interface BlockQuoteProps {
+interface BlockQuoteProps extends BoxProps {
   content: string;
 }
 
-export const BlockQuote = ({ content } : BlockQuoteProps) => {
-  const quoteSx = {
-    fontFamily: 'Didot',
-    fontStyle: 'normal',
-    fontWeight: 700,
-    fontSize: '82px',
-    lineHeight: '102%',
-    textAlign: 'center',
-    color: colors.text.heading,
-    position: 'absolute',
-  };
-
+export const BlockQuote = ({
+  content, sx
+} : BlockQuoteProps) => {
   const contentSx = {
-    fontFamily: 'Roboto',
-    fontStyle: 'italic',
+    fontFamily: 'Diazo MVB Rough2 Cond',
+    fontStyle: 'normal',
     fontWeight: '400',
-    fontSize: '26px',
+    fontSize: '28px',
     lineHeight: '102%',
     textAlign: 'center',
     width: '221px',
     margin: 'auto',
+    color: colors.text.heading,
   }
 
   return (
@@ -37,18 +29,9 @@ export const BlockQuote = ({ content } : BlockQuoteProps) => {
       width: '221px',
       margin: 'auto',
       position: 'relative',
+      ...sx,
     }}>
-      <Typography sx={{
-        ...quoteSx,
-        top: '-15px',
-        left: '-72px'
-      }}>“</Typography>
       <Typography sx={contentSx}>{content}</Typography>
-      <Typography sx={{
-        ...quoteSx,
-        bottom: '-15px',
-        right: '-24px'
-      }}>„</Typography>
     </Box>
   )
 }
