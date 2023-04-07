@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'GothamSSm Bold';
+  src: url('./GothamSSm-Bold.otf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothamSSm Extra Light';
+  src: url('./GothamSSm-ExtraLight.otf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothamSSm Light';
+  src: url('./GothamSSm-Light.otf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothamSSm Narrow Bold';
+  src: url('./GothamSSm-Narrow-Bold.otf');
+  font-style: normal;
+}
