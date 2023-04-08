@@ -131,7 +131,7 @@ export default function HomePage() {
           .
         </Typography>
 
-        <CustomVideo name="Gary" video={<YoutubeEmbed embedId='YnONLDo6PWI' />}>
+        <CustomVideo name="Gary" video={<YoutubeEmbed embedId='YnONLDo6PWI' />} sx={{ mt: 2.5 }}>
           <AspectRatioBox ratio={16 / 9} sx={{}}>
             <img src='gary.jpg' alt='Najbolji govor koji ćeš ikada čuti' />
           </AspectRatioBox>
