@@ -1,5 +1,6 @@
 import { Box, Typography } from "@mui/material";
-import { AspectRatioBox, BlockQuote, Carousel, CustomVideo, DoubleImage, Logo, SocialMediaCards, TakeAction, YoutubeEmbed } from "components";
+import { AspectRatioBox, Carousel, CustomVideo, DoubleImage, Logo, SocialMediaCards, TakeAction, YoutubeEmbed } from "components";
+import Image from "next/image";
 import { colors } from 'utils';
 
 import styles from "./index.module.css";
@@ -138,7 +139,14 @@ export default function HomePage() {
         </CustomVideo>
       </Box>
 
-      <BlockQuote content='Životinje nisu naše da sa njima radimo šta god hoćemo.' />
+      <AspectRatioBox ratio={889 / 337} sx={{ mx: '73.29px' }}>
+        <Image
+          src='zivotinjenisunase.png'
+          alt='1'
+          layout="fill"
+          unoptimized={true}
+        />
+      </AspectRatioBox>
 
       <Typography sx={{
         ...heading3Style,
@@ -189,10 +197,17 @@ export default function HomePage() {
         }}
       />
 
-      <BlockQuote
-        content='Životinje nisu naše da sa njima radimo šta god hoćemo.'
-        sx={{ marginBottom: '154.92px' }}
-      />
+      <AspectRatioBox ratio={889 / 337} sx={{
+        mx: '73.29px',
+        mb: '154.92px'
+      }}>
+        <Image
+          src='zivotinjenisunase.png'
+          alt='1'
+          layout="fill"
+          unoptimized={true}
+        />
+      </AspectRatioBox>
 
       <Logo
         width='101.47px'
