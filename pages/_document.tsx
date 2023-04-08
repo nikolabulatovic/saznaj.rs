@@ -137,7 +137,11 @@ export default function Document() {
           content='U industrijama u kojima se životinje iskorišćavaju, nikad nam nije prikazana istina o njihovim životima.'
         />
         <meta name='og:url' content='saznaj.rs' />
-        <meta name='og:image' content='saznaj.rs/preview.png' />
+        <meta property="og:image" content="http://saznaj.rs/preview.png" />
+        <meta property="og:image:secure_url" content="https://saznaj.rs/preview.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta name='og:site_name' content='saznaj.rs' />
         <meta name='Twiter:card' content='Photo' />
         <meta name='Twiter:title' content='saznaj.rs' />
@@ -146,7 +150,7 @@ export default function Document() {
           content='U industrijama u kojima se životinje iskorišćavaju, nikad nam nije prikazana istina o njihovim životima.'
         />
         <meta name='Twiter:url' content='saznaj.rs' />
-        <meta name='Twiter:image' content='saznaj.rs/preview.png' />
+        <meta name='Twiter:image' content='https://saznaj.rs/preview.png' />
         <meta name='keywords' content='saznaj,veganstvo,zivotinje'></meta>
         <meta name='author' content='saznaj.rs' />
         <meta
