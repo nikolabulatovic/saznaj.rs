@@ -10,6 +10,7 @@ interface DoubleImageProps {
   url1: string;
   url2: string;
   background: CSSProperties['background'];
+  name: string;
 }
 
 const containerStyle = {
@@ -58,40 +59,36 @@ const textOverlay = {
   '-khtml-user-select': 'none', /* Konqueror HTML */
 };
 
+const textOverlayHidden = { display: 'none' }
+
 export const DoubleImage = ({
-  url1, url2, background
+  url1, url2, background, name
 }: DoubleImageProps) => {
   const [showImage, setShowImage] = useState(false)
+
+  const sxOverlay = {
+    ...overlay,
+    background,
+  };
+
+  const onHiddenClick = () => {
+    setShowImage(true);
+    window.mixpanel.track(`Hidden Image Clicked - ${name}`);
+  }
 
   return (
     <Box sx={containerStyle}>
       <AspectRatioBox sx={itemStyle}>
-        <Image
-          src={url1}
-          alt='1'
-          layout="fill"
-          unoptimized={true}
-        />
+        <Image src={url1} alt='1' layout='fill' unoptimized={true} />
       </AspectRatioBox>
-      <Box onClick={() => setShowImage(true)} sx={itemStyle}>
-        <Box sx={{
-          ...overlay,
-          background
-        }} className={showImage ? styles.shown : styles.hidden}/>
-        <Typography
-          sx={{
-            ...textOverlay,
-            display: showImage ? 'none' : undefined
-          }}>
-          Klikni da saznaš
-        </Typography>
+      <Box onClick={onHiddenClick} sx={itemStyle}>
+        <Box
+          sx={background ? sxOverlay : overlay}
+          className={showImage ? styles.shown : styles.hidden}
+        />
+        <Typography sx={showImage ? textOverlayHidden : textOverlay}>Klikni da saznaš</Typography>
         <AspectRatioBox>
-          <Image
-            src={url2}
-            alt='2'
-            layout="fill"
-            unoptimized={true}
-          />
+          <Image src={url2} alt='2' layout='fill' unoptimized={true} />
         </AspectRatioBox>
       </Box>
     </Box>

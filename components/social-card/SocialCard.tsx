@@ -18,38 +18,36 @@ const SocialCard = ({
   return (
     <Link
       href={link}
-      target="_blank"
-    >
-      <Box sx={{
-        width: '118px',
-        height: '118px',
-        position: 'relative',
-      }}>
-        <Box sx={{
+      onClick={() => window.mixpanel.track(`Social Card Clicked - ${name}`)}
+      target='_blank'>
+      <Box
+        sx={{
           width: '118px',
           height: '118px',
-          position: "absolute",
-          opacity: '0.33',
-          "& img": {
-            objectFit: 'cover',
-            paddingLeft: '3px',
-            paddingTop: '3px',
-            boxSizing: 'border-box'
-          }
+          position: 'relative',
         }}>
-          <Image
-            src={image}
-            alt={name}
-            layout="fill"
-            unoptimized={true}
-          />
+        <Box
+          sx={{
+            width: '118px',
+            height: '118px',
+            position: 'absolute',
+            opacity: '0.33',
+            '& img': {
+              objectFit: 'cover',
+              paddingLeft: '3px',
+              paddingTop: '3px',
+              boxSizing: 'border-box',
+            },
+          }}>
+          <Image src={image} alt={name} layout='fill' unoptimized={true} />
         </Box>
 
-        <Box sx={{
-          position: 'absolute',
-          bottom: '5px',
-          left: '7px',
-        }}>
+        <Box
+          sx={{
+            position: 'absolute',
+            bottom: '5px',
+            left: '7px',
+          }}>
           <Typography
             sx={{
               fontFamily: 'GothamSSm Bold',
@@ -60,23 +58,23 @@ const SocialCard = ({
               color: colors.text.socialCardName,
               textTransform: 'uppercase',
               userSelect: 'none',
-              ...isDiagonal ? rotatedSx : {}
-            }}
-          >
+              ...isDiagonal ? rotatedSx : {},
+            }}>
             {name}
           </Typography>
 
-          <Typography sx={{
-            fontFamily: 'GothamSSm Bold',
-            fontStyle: 'normal',
-            fontWeight: 700,
-            fontSize: '8px',
-            lineHeight: '10px',
-            letterSpacing: '0.06em',
-            color: colors.text.socialCardName,
-            textTransform: 'uppercase',
-            userSelect: 'none',
-          }}>
+          <Typography
+            sx={{
+              fontFamily: 'GothamSSm Bold',
+              fontStyle: 'normal',
+              fontWeight: 700,
+              fontSize: '8px',
+              lineHeight: '10px',
+              letterSpacing: '0.06em',
+              color: colors.text.socialCardName,
+              textTransform: 'uppercase',
+              userSelect: 'none',
+            }}>
             {description}
           </Typography>
         </Box>

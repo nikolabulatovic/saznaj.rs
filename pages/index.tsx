@@ -109,6 +109,7 @@ export default function HomePage() {
           url1='1.png'
           url2='2.png'
           background='rgba(29, 28, 46, 0.9)'
+          name='Krava'
         />
 
         <Typography sx={darkColorParagraph}>
@@ -120,6 +121,7 @@ export default function HomePage() {
           url1='3.png'
           url2='4.png'
           background='rgba(43, 41, 38, 0.9)'
+          name='Prase'
         />
 
         <Typography sx={darkColorParagraph}>
@@ -129,7 +131,7 @@ export default function HomePage() {
           .
         </Typography>
 
-        <CustomVideo video={<YoutubeEmbed embedId='YnONLDo6PWI' />}>
+        <CustomVideo name="Gary" video={<YoutubeEmbed embedId='YnONLDo6PWI' />}>
           <AspectRatioBox ratio={16 / 9} sx={{}}>
             <img src='gary.jpg' alt='Najbolji govor koji ćeš ikada čuti' />
           </AspectRatioBox>

@@ -2,16 +2,22 @@ import { Box, BoxProps } from "@mui/material"
 import React, { useState } from "react";
 
 interface CustomVideoProps extends BoxProps {
+  name: string;
   video: any;
 }
 
 export const CustomVideo = ({
-  children, video
+  children, name, video,
 }: CustomVideoProps) => {
   const [videoPlayed, playVideo] = useState<boolean>(false);
 
+  const onVideoClick = () => {
+    playVideo(true);
+    window.mixpanel.track(`Video Clicked - ${name}`);
+  }
+
   return (
-    <Box sx={{ position: 'relative' }} onClick={() => playVideo(true)}>
+    <Box sx={{ position: 'relative' }} onClick={onVideoClick}>
       {!videoPlayed && children || video}
 
       <Box

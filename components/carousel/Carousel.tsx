@@ -234,6 +234,11 @@ export const Carousel = () => {
     [slider, stopAutoplay]
   );
 
+  const onButtonClick = (name: string) => {
+    setStopAutoplay(true);
+    window.mixpanel.track(`Slider Button Clicked - ${name}`);
+  }
+
   return (
     <Box className='glide' sx={glideStyle}>
       <div className='glide__track' data-glide-el='track'>
@@ -244,10 +249,16 @@ export const Carousel = () => {
               key={item.title}
               onClick={() => setStopAutoplay(true)}
               sx={slideItemStyle}>
-              <CustomVideo video={<YoutubeEmbed embedId={item.videoEmbedId} />}>
+              <CustomVideo
+                name={item.title}
+                video={<YoutubeEmbed embedId={item.videoEmbedId} />}>
                 <AspectRatioBox ratio={1.777777} sx={slideImageStyle}>
                   <Box sx={slideImageOverlay} />
-                  <img src={item.imageUrl} alt={item.title} style={{ opacity: item.opacity }} />
+                  <img
+                    src={item.imageUrl}
+                    alt={item.title}
+                    style={{ opacity: item.opacity }}
+                  />
                 </AspectRatioBox>
                 <Box sx={playButtonStyle}>
                   <AspectRatioBox>
@@ -273,7 +284,7 @@ export const Carousel = () => {
             className='glide__bullet'
             data-glide-dir={`=${index}`}
             key={item.title}
-            onClick={() => setStopAutoplay(true)}
+            onClick={() => onButtonClick(item.title)}
             sx={slideItemStyle}>
             <AspectRatioBox ratio={1.777777} sx={slideImageStyle}>
               <img src={item.imageUrl} alt={item.title} />
