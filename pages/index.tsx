@@ -1,5 +1,6 @@
 import { Box, Typography } from "@mui/material";
-import { AspectRatioBox, BlockQuote, Carousel, CustomVideo, DoubleImage, Logo, SocialMediaCards, TakeAction, YoutubeEmbed } from "components";
+import { AspectRatioBox, Carousel, CustomVideo, DoubleImage, Logo, SocialMediaCards, TakeAction, YoutubeEmbed } from "components";
+import Image from "next/image";
 import { colors } from 'utils';
 
 import styles from "./index.module.css";
@@ -110,6 +111,7 @@ export default function HomePage() {
           url2='2.png'
           background='rgba(29, 28, 46, 0.9)'
           name='Krava'
+          color={colors.text.clickToFindOut.cow}
         />
 
         <Typography sx={darkColorParagraph}>
@@ -122,23 +124,30 @@ export default function HomePage() {
           url2='4.png'
           background='rgba(43, 41, 38, 0.9)'
           name='Prase'
+          color={colors.text.clickToFindOut.dog}
         />
 
         <Typography sx={darkColorParagraph}>
           Baš kao tvoj pas ili mačka, životinje u industrijama mesa, mleka i
           jaja osećaju bol i ne žele da budu nepravedno ubijene.{' '}
-          <strong>Životinje nisu naše da sa njima radimo šta god hoćemo</strong>
-          .
+          <Typography component="span" sx={{ fontFamily: 'Bio Sans Bold' }}>Životinje nisu naše da sa njima radimo šta god hoćemo.</Typography>
         </Typography>
 
-        <CustomVideo name="Gary" video={<YoutubeEmbed embedId='YnONLDo6PWI' />}>
+        <CustomVideo name="Gary" video={<YoutubeEmbed embedId='YnONLDo6PWI' />} sx={{ mt: 2.5 }}>
           <AspectRatioBox ratio={16 / 9} sx={{}}>
             <img src='gary.jpg' alt='Najbolji govor koji ćeš ikada čuti' />
           </AspectRatioBox>
         </CustomVideo>
       </Box>
 
-      <BlockQuote content='Životinje nisu naše da sa njima radimo šta god hoćemo.' />
+      <AspectRatioBox ratio={889 / 337} sx={{ mx: '73.29px' }}>
+        <Image
+          src='zivotinjenisunase.png'
+          alt='1'
+          layout="fill"
+          unoptimized={true}
+        />
+      </AspectRatioBox>
 
       <Typography sx={{
         ...heading3Style,
@@ -189,10 +198,17 @@ export default function HomePage() {
         }}
       />
 
-      <BlockQuote
-        content='Životinje nisu naše da sa njima radimo šta god hoćemo.'
-        sx={{ marginBottom: '154.92px' }}
-      />
+      <AspectRatioBox ratio={889 / 337} sx={{
+        mx: '73.29px',
+        mb: '154.92px'
+      }}>
+        <Image
+          src='zivotinjenisunase.png'
+          alt='1'
+          layout="fill"
+          unoptimized={true}
+        />
+      </AspectRatioBox>
 
       <Logo
         width='101.47px'

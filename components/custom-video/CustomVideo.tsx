@@ -7,7 +7,7 @@ interface CustomVideoProps extends BoxProps {
 }
 
 export const CustomVideo = ({
-  children, name, video,
+  children, name, video, sx, ...boxProps
 }: CustomVideoProps) => {
   const [videoPlayed, playVideo] = useState<boolean>(false);
 
@@ -17,7 +17,10 @@ export const CustomVideo = ({
   }
 
   return (
-    <Box sx={{ position: 'relative' }} onClick={onVideoClick}>
+    <Box {...boxProps} sx={{
+      position: 'relative',
+      ...sx
+    }} onClick={onVideoClick}>
       {!videoPlayed && children || video}
 
       <Box

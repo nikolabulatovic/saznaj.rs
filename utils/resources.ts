@@ -136,7 +136,7 @@ export const socialMediaCards: Array<SocialMediaCardInfo> = [
     description: 'Lični blog',
     type: 'Youtube',
     link: '',
-    image: 'vegangains.webp',
+    image: 'vegangains.jpg',
   },
   {
     name: 'Animal Rebellion',
