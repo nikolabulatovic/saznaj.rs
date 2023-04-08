@@ -105,7 +105,7 @@ export default function Document() {
               opacity: 0;
             }
           }
-          
+
           @keyframes custom-fadeout {
             0% {
               opacity: 0;
@@ -132,21 +132,30 @@ export default function Document() {
         <meta name='og:locale' content='sr_RS' />
         <meta name='og:type' content='website' />
         <meta name='og:title' content='saznaj.rs' />
-        <meta name='og:descritpion' content='U industrijama u kojima se životinje iskorišćavaju, nikad nam nije prikazana istina o njihovim životima.' />
+        <meta
+          name='og:descritpion'
+          content='U industrijama u kojima se životinje iskorišćavaju, nikad nam nije prikazana istina o njihovim životima.'
+        />
         <meta name='og:url' content='saznaj.rs' />
         <meta name='og:image' content='saznaj.rs/preview.png' />
         <meta name='og:site_name' content='saznaj.rs' />
         <meta name='Twiter:card' content='Photo' />
         <meta name='Twiter:title' content='saznaj.rs' />
-        <meta name='Twiter:description' content='U industrijama u kojima se životinje iskorišćavaju, nikad nam nije prikazana istina o njihovim životima.' />
+        <meta
+          name='Twiter:description'
+          content='U industrijama u kojima se životinje iskorišćavaju, nikad nam nije prikazana istina o njihovim životima.'
+        />
         <meta name='Twiter:url' content='saznaj.rs' />
         <meta name='Twiter:image' content='saznaj.rs/preview.png' />
-        <meta name="keywords" content="saznaj,veganstvo,zivotinje"></meta>
-        <meta name="author" content="saznaj.rs" />
-        <meta name="description" content="U industrijama u kojima se životinje iskorišćavaju, nikad nam nije prikazana istina o njihovim životima."></meta>
-        <link rel="icon" type="image/png" href=".//favicon.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="./touch.png" />
-        <link rel="shortcut icon" href="./favicon.png"></link>
+        <meta name='keywords' content='saznaj,veganstvo,zivotinje'></meta>
+        <meta name='author' content='saznaj.rs' />
+        <meta
+          name='description'
+          content='U industrijama u kojima se životinje iskorišćavaju, nikad nam nije prikazana istina o njihovim životima.'></meta>
+        <link rel='icon' type='image/png' href='./favicon.png' />
+        <link rel='apple-touch-icon' sizes='180x180' href='./touch.png' />
+        <link rel='shortcut icon' href='./favicon.png'></link>
+        <link rel='manifest' href='./site.webmanifest' />
       </Head>
       <body
         style={{
