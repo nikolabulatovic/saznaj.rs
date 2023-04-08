@@ -63,7 +63,7 @@ export const socialMediaCards: Array<SocialMediaCardInfo> = [
   },
   {
     name: 'Sloboda za životinje',
-    description: 'Razmena recepata',
+    description: 'Udruženje',
     type: 'Facebook',
     link: 'https://www.facebook.com/SlobodaZaZivotinje',
     image: 'slobodazazivotinje.png',
