@@ -1,6 +1,12 @@
 import { Head, Html, Main, NextScript } from 'next/document';
 import { colors } from 'utils';
 
+declare global {
+  interface Window {
+    mixpanel: any;
+  }
+}
+
 const scriptTxt = `
 (function () {
   function scalePage() {
@@ -68,7 +74,7 @@ export default function Document() {
   return (
     <Html lang='en'>
       <Head>
-        <script dangerouslySetInnerHTML={{ __html: scriptTxt }}/>
+        <script dangerouslySetInnerHTML={{ __html: scriptTxt }} />
         <style>{`
           @keyframes custom-fadein {
             0%   {
@@ -101,19 +107,15 @@ export default function Document() {
             pointer-events: none;
           }
         `}</style>
-        <meta name="theme-color" content="#272020"/>
+        <meta name='theme-color' content='#272020' />
       </Head>
       <body
         style={{
           backgroundColor: colors.background,
           color: colors.text.primary,
           margin: '0',
-        }}
-      >
-        <div
-          id="cover"
-          className='shown'
-        />
+        }}>
+        <div id='cover' className='shown' />
 
         <Main />
         <NextScript />
