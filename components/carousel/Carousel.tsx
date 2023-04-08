@@ -19,7 +19,7 @@ const items: Array<CarouselItem> = [
   {
     title: 'The Game Changers',
     subtext: 'Fueled by the truth.',
-    imageUrl: '/carousel-images/the-game-changers.jpg',
+    imageUrl: '/carousel-images/the-game-changers.jpeg',
     videoEmbedId: 'iSpglxHTJVM',
     opacity: 1,
   },
