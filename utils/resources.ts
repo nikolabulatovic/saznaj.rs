@@ -139,18 +139,25 @@ export const socialMediaCards: Array<SocialMediaCardInfo> = [
     image: 'vegangains.jpg',
   },
   {
-    name: 'Animal Rebellion',
-    description: 'Aktivizam',
-    type: 'Youtube',
-    link: 'https://www.youtube.com/@AnimalRebellion',
-    image: 'animalrebelion.jpg',
-  },
-  {
     name: 'Beyond Carnism',
     description: 'Psihologija',
     type: 'Youtube',
     link: 'https://www.youtube.com/@BeyondCarnism',
     image: 'beyondcarnism.jpg',
+  },
+  {
+    name: 'Nutrition Facts',
+    description: 'Zdravlje',
+    type: 'Youtube',
+    link: 'https://www.youtube.com/@NutritionFactsOrg',
+    image: 'nutritionfacts.jpg',
+  },
+  {
+    name: 'Direct Action Everywhere',
+    description: 'Aktivizam',
+    type: 'Youtube',
+    link: 'https://www.youtube.com/@DirectActionEverywhere',
+    image: 'dxe.png',
   },
 ];
 
