@@ -128,8 +128,7 @@ export default function HomePage() {
         <Typography sx={darkColorParagraph}>
           Baš kao tvoj pas ili mačka, životinje u industrijama mesa, mleka i
           jaja osećaju bol i ne žele da budu nepravedno ubijene.{' '}
-          <strong>Životinje nisu naše da sa njima radimo šta god hoćemo</strong>
-          .
+          <Typography component="span" sx={{ fontFamily: 'Bio Sans Bold' }}>Životinje nisu naše da sa njima radimo šta god hoćemo.</Typography>
         </Typography>
 
         <CustomVideo name="Gary" video={<YoutubeEmbed embedId='YnONLDo6PWI' />} sx={{ mt: 2.5 }}>
