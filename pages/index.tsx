@@ -5,16 +5,20 @@ import { colors } from 'utils';
 
 import styles from "./index.module.css";
 
-const darkColorParagraph = {
+const paragraphCommon = {
   color: '#4E4646',
-  fontFamily: 'Bio Sans',
   fontStyle: 'normal',
   fontWeight: 400,
   fontSize: '14px',
   lineHeight: '18px',
   letterSpacing: '0.03em',
-  margin: '0px 16.32px 0px 22.94px',
   userSelect: 'none',
+}
+
+const darkColorParagraph = {
+  ...paragraphCommon,
+  fontFamily: 'Bio Sans',
+  margin: '0px 16.32px 0px 22.94px',
 }
 
 export default function HomePage() {
@@ -143,7 +147,10 @@ export default function HomePage() {
         <Typography sx={darkColorParagraph}>
           Baš kao tvoj pas ili mačka, životinje u industrijama mesa, mleka i
           jaja osećaju bol i ne žele da budu nepravedno ubijene.{' '}
-          <Typography component='span' sx={{ fontFamily: 'Bio Sans Bold' }}>
+          <Typography component='span' sx={{
+            ...paragraphCommon,
+            fontFamily: 'Bio Sans Bold'
+          }}>
             Životinje nisu naše da sa njima radimo šta god hoćemo.
           </Typography>
         </Typography>
