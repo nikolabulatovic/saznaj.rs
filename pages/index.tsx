@@ -69,16 +69,15 @@ export default function HomePage() {
 
   return (
     <Box
-      id="page"
+      id='page'
       sx={{
-        display: "flex",
-        flexDirection: "column",
-        maxWidth: "375px",
-        width: "100%",
-        margin: "auto",
+        display: 'flex',
+        flexDirection: 'column',
+        maxWidth: '375px',
+        width: '100%',
+        margin: 'auto',
         transformOrigin: 'top',
-      }}
-    >
+      }}>
       <Logo
         style={{
           margin: 'auto',
@@ -107,11 +106,13 @@ export default function HomePage() {
           marginBottom: '27.36px',
         }}>
         <DoubleImage
-          url1='1.png'
-          url2='2.png'
+          alt1='Srećne krave iz Milkine kampanje "Pokaži nežnost"'
+          alt2='Krvava krava u industriji'
           background='rgba(29, 28, 46, 0.9)'
-          name='Krava'
           color={colors.text.clickToFindOut.cow}
+          name='Krava'
+          url1='srecne-krave-milka.png'
+          url2='krvava-krava.png'
         />
 
         <Typography sx={darkColorParagraph}>
@@ -120,20 +121,27 @@ export default function HomePage() {
         </Typography>
 
         <DoubleImage
-          url1='3.png'
-          url2='4.png'
+          alt1='Pas tužnog pogleda'
+          alt2='Prase tuguje zbog smrti svog brata u industriji mesa'
           background='rgba(43, 41, 38, 0.9)'
-          name='Prase'
           color={colors.text.clickToFindOut.dog}
+          name='Prase'
+          url1='pas.png'
+          url2='prase.png'
         />
 
         <Typography sx={darkColorParagraph}>
           Baš kao tvoj pas ili mačka, životinje u industrijama mesa, mleka i
           jaja osećaju bol i ne žele da budu nepravedno ubijene.{' '}
-          <Typography component="span" sx={{ fontFamily: 'Bio Sans Bold' }}>Životinje nisu naše da sa njima radimo šta god hoćemo.</Typography>
+          <Typography component='span' sx={{ fontFamily: 'Bio Sans Bold' }}>
+            Životinje nisu naše da sa njima radimo šta god hoćemo.
+          </Typography>
         </Typography>
 
-        <CustomVideo name="Gary" video={<YoutubeEmbed embedId='YnONLDo6PWI' />} sx={{ mt: 2.5 }}>
+        <CustomVideo
+          name='Gary'
+          video={<YoutubeEmbed embedId='YnONLDo6PWI' />}
+          sx={{ mt: 2.5 }}>
           <AspectRatioBox ratio={16 / 9} sx={{}}>
             <img src='gary.jpg' alt='Najbolji govor koji ćeš ikada čuti' />
           </AspectRatioBox>
@@ -143,17 +151,18 @@ export default function HomePage() {
       <AspectRatioBox ratio={889 / 337} sx={{ mx: '73.29px' }}>
         <Image
           src='zivotinjenisunase.png'
-          alt='1'
-          layout="fill"
+          alt='Životinje nisu naše da sa njima radimo šta god hoćemo'
+          layout='fill'
           unoptimized={true}
         />
       </AspectRatioBox>
 
-      <Typography sx={{
-        ...heading3Style,
-        marginTop: '89.67px',
-        marginBottom: '13.79px',
-      }}>
+      <Typography
+        sx={{
+          ...heading3Style,
+          marginTop: '89.67px',
+          marginBottom: '13.79px',
+        }}>
         Dokumentarci
       </Typography>
 
@@ -198,14 +207,16 @@ export default function HomePage() {
         }}
       />
 
-      <AspectRatioBox ratio={889 / 337} sx={{
-        mx: '73.29px',
-        mb: '154.92px'
-      }}>
+      <AspectRatioBox
+        ratio={889 / 337}
+        sx={{
+          mx: '73.29px',
+          mb: '154.92px',
+        }}>
         <Image
           src='zivotinjenisunase.png'
           alt='1'
-          layout="fill"
+          layout='fill'
           unoptimized={true}
         />
       </AspectRatioBox>
@@ -230,23 +241,23 @@ export default function HomePage() {
           letterSpacing: '0.05em',
           color: colors.text.acknowledgementsHeading,
           userSelect: 'none',
-        }}
-      >
+        }}>
         DIZAJNIRANO U BEOGRADU®
       </Typography>
 
-      <Typography sx={{
-        fontFamily: 'ABChanel Corpo',
-        fontStyle: 'normal',
-        fontWeight: 600,
-        fontSize: '6px',
-        lineHeight: '18px',
-        textAlign: 'center',
-        letterSpacing: '0.17em',
-        color: colors.text.acknowledgementsContent,
-        marginBottom: '90.22px',
-        userSelect: 'none',
-      }}>
+      <Typography
+        sx={{
+          fontFamily: 'ABChanel Corpo',
+          fontStyle: 'normal',
+          fontWeight: 600,
+          fontSize: '6px',
+          lineHeight: '18px',
+          textAlign: 'center',
+          letterSpacing: '0.17em',
+          color: colors.text.acknowledgementsContent,
+          marginBottom: '90.22px',
+          userSelect: 'none',
+        }}>
         Autori pomenutih sadžaja nisu afilisani sa saznaj.rs.
       </Typography>
     </Box>

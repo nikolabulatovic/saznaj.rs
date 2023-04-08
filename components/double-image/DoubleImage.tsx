@@ -6,11 +6,13 @@ import { CSSProperties, useState } from 'react'
 import styles from './DoubleImage.module.css';
 
 interface DoubleImageProps {
+  alt1: string;
+  alt2: string;
+  background: CSSProperties['background'];
+  color: CSSProperties['color'];
+  name: string;
   url1: string;
   url2: string;
-  background: CSSProperties['background'];
-  name: string;
-  color: CSSProperties['color'];
 }
 
 const containerStyle = {
@@ -57,35 +59,44 @@ const textOverlay: CSSProperties = {
 } as CSSProperties;
 
 export const DoubleImage = ({
-  url1, url2, background, name, color
+  alt1,
+  alt2,
+  background,
+  color,
+  name,
+  url1,
+  url2,
 }: DoubleImageProps) => {
-  const [showImage, setShowImage] = useState(false)
+  const [showImage, setShowImage] = useState(false);
 
   const onHiddenClick = () => {
     setShowImage(true);
     window.mixpanel.track(`Hidden Image Clicked - ${name}`);
-  }
+  };
 
   return (
     <Box sx={containerStyle}>
       <AspectRatioBox sx={itemStyle}>
-        <Image src={url1} alt='1' layout='fill' unoptimized={true} />
+        <Image src={url1} alt={alt1} layout='fill' unoptimized={true} />
       </AspectRatioBox>
       <Box onClick={onHiddenClick} sx={itemStyle}>
-        <Box sx={{
-          ...overlay,
-          background
-        }} className={showImage ? styles.shown : styles.hidden}/>
+        <Box
+          sx={{
+            ...overlay,
+            background,
+          }}
+          className={showImage ? styles.shown : styles.hidden}
+        />
         <Typography
           sx={{
             ...textOverlay,
             color,
-            display: showImage ? 'none' : undefined
+            display: showImage ? 'none' : undefined,
           }}>
           Klikni da saznaš
         </Typography>
         <AspectRatioBox>
-          <Image src={url2} alt='2' layout='fill' unoptimized={true} />
+          <Image src={url2} alt={alt2} layout='fill' unoptimized={true} />
         </AspectRatioBox>
       </Box>
     </Box>

@@ -39,7 +39,7 @@ const SocialCard = ({
               boxSizing: 'border-box',
             },
           }}>
-          <Image src={image} alt={name} layout='fill' unoptimized={true} />
+          <Image src={image} alt={`${name}, ${description}`} layout='fill' unoptimized={true} />
         </Box>
 
         <Box
