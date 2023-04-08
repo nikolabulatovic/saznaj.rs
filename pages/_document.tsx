@@ -139,16 +139,16 @@ export default function Document() {
           }
         `}</style>
         <meta name='theme-color' content='#272020' />
-        <meta name='og:locale' content='sr_RS' />
-        <meta name='og:type' content='website' />
-        <meta name='og:title' content='saznaj.rs' />
+        <meta property='og:locale' content='sr_RS' />
+        <meta property='og:type' content='website' />
+        <meta property='og:title' content='saznaj.rs' />
         <meta
-          name='og:description'
+          property='og:description'
           content='U industrijama u kojima se životinje iskorišćavaju, nikad nam nije prikazana istina o njihovim životima.'
         />
-        <meta name='og:url' content='saznaj.rs' />
-        <meta name='og:image' content='https://saznaj.rs/preview.png' />
-        <meta name='og:site_name' content='saznaj.rs' />
+        <meta property='og:url' content='saznaj.rs' />
+        <meta property='og:image' content='https://saznaj.rs/preview.png' />
+        <meta property='og:site_name' content='saznaj.rs' />
         <meta name='Twitter:card' content='Photo' />
         <meta name='Twitter:title' content='saznaj.rs' />
         <meta
