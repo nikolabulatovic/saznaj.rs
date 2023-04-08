@@ -1,5 +1,5 @@
-import { Box, BoxProps } from "@mui/material"
-import React, { useState } from "react";
+import { Box, BoxProps } from '@mui/material';
+import React, { useState } from 'react';
 
 interface CustomVideoProps extends BoxProps {
   name: string;
@@ -7,21 +7,29 @@ interface CustomVideoProps extends BoxProps {
 }
 
 export const CustomVideo = ({
-  children, name, video, sx, ...boxProps
+  children,
+  name,
+  video,
+  sx,
+  ...boxProps
 }: CustomVideoProps) => {
   const [videoPlayed, playVideo] = useState<boolean>(false);
 
   const onVideoClick = () => {
     playVideo(true);
     window.mixpanel.track(`Video Clicked - ${name}`);
-  }
+  };
 
   return (
-    <Box {...boxProps} sx={{
-      position: 'relative',
-      ...sx
-    }} onClick={onVideoClick}>
-      {!videoPlayed && children || video}
+    <Box
+      {...boxProps}
+      sx={{
+        cursor: 'pointer',
+        position: 'relative',
+        ...sx,
+      }}
+      onClick={onVideoClick}>
+      {(!videoPlayed && children) || video}
 
       <Box
         sx={{
@@ -35,4 +43,4 @@ export const CustomVideo = ({
       />
     </Box>
   );
-}
+};
