@@ -35,16 +35,36 @@ const scriptTxt = `
   window.addEventListener(
     'load',
     event => {
-      scalePage();
-      setTimeout(
-        () => {
+      const mandatoryElements = document.querySelectorAll('[id=mandatory]');
+
+      allImgsLength = mandatoryElements.length;
+      allImgsLoaded = 0;
+
+      const onImageLoaded = () => {
+        allImgsLoaded++;
+
+        if (allImgsLoaded === allImgsLength) {
+          scalePage();
           const element = document.getElementById('cover');
           if (element) {
             element.className = 'hidden';
           }
-        },
-        2000
-      )
+        }
+      }
+
+      for (let i = 0; i < mandatoryElements.length; i++) {
+        const element = mandatoryElements[i];
+
+        let isLoaded = element.complete && element.naturalHeight !== 0;
+
+        if (isLoaded) {
+          onImageLoaded();
+        } else {
+          element.addEventListener('load', function () {
+            onImageLoaded();
+          });
+        }
+      }
     }
   );
 

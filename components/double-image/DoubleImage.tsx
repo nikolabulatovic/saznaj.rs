@@ -77,7 +77,7 @@ export const DoubleImage = ({
   return (
     <Box sx={containerStyle}>
       <AspectRatioBox sx={itemStyle}>
-        <Image src={url1} alt={alt1} layout='fill' unoptimized={true} />
+        <Image src={url1} alt={alt1} layout='fill' unoptimized={true} id="mandatory" />
       </AspectRatioBox>
       <Box onClick={onHiddenClick} sx={itemStyle}>
         <Box
@@ -96,7 +96,7 @@ export const DoubleImage = ({
           Klikni da saznaš
         </Typography>
         <AspectRatioBox>
-          <Image src={url2} alt={alt2} layout='fill' unoptimized={true} />
+          <Image src={url2} alt={alt2} layout='fill' unoptimized={true} id="mandatory" />
         </AspectRatioBox>
       </Box>
     </Box>
