@@ -144,7 +144,7 @@ export default function Document() {
         <meta name='og:type' content='website' />
         <meta name='og:title' content='saznaj.rs' />
         <meta
-          name='og:descritpion'
+          name='og:description'
           content='U industrijama u kojima se životinje iskorišćavaju, nikad nam nije prikazana istina o njihovim životima.'
         />
         <meta name='og:url' content='saznaj.rs' />
