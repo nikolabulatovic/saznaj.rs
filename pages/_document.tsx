@@ -1,4 +1,5 @@
 import { Head, Html, Main, NextScript } from 'next/document';
+import { HtmlHTMLAttributes } from 'react';
 import { colors } from 'utils';
 
 declare global {
@@ -92,7 +93,16 @@ export default function Document() {
   `;
 
   return (
-    <Html lang='en'>
+    <Html
+      lang='en'
+      style={{
+        touchAction: 'pan-x pan-y !important',
+        '-webkit-text-size-adjust': 'none',
+        '-ms-text-size-adjust': 'none',
+        overflow: 'hidden',
+        userSelect: 'none',
+      } as HtmlHTMLAttributes<HTMLHtmlElement>}
+    >
       <title>saznaj.rs</title>
       <Head>
         <script dangerouslySetInnerHTML={{ __html: scriptTxt }} />
