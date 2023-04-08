@@ -148,16 +148,16 @@ export default function Document() {
           content='U industrijama u kojima se životinje iskorišćavaju, nikad nam nije prikazana istina o njihovim životima.'
         />
         <meta name='og:url' content='saznaj.rs' />
-        <meta property='og:image' content='http://saznaj.rs/preview.png' />
+        <meta name='og:image' content='http://saznaj.rs/preview.png' />
         <meta
-          property='og:image:secure_url'
+          name='og:image:secure_url'
           content='https://saznaj.rs/preview.png'
         />
-        <meta property='og:image:type' content='image/png' />
-        <meta property='og:image:width' content='1200' />
-        <meta property='og:image:height' content='630' />
+        <meta name='og:image:type' content='image/png' />
+        <meta name='og:image:width' content='1200' />
+        <meta name='og:image:height' content='630' />
         <meta name='og:site_name' content='saznaj.rs' />
-        <meta property='og:thumbnail' content='https://saznaj.rs/preview.png' />
+        <meta name='og:thumbnail' content='https://saznaj.rs/preview.png' />
         <meta name='Twitter:card' content='Photo' />
         <meta name='Twitter:title' content='saznaj.rs' />
         <meta
