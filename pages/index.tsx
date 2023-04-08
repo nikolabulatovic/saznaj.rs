@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material";
-import { AspectRatioBox, Carousel, CustomVideo, DoubleImage, Logo, SocialMediaCards, TakeAction, YoutubeEmbed } from "components";
+import { AspectRatioBox, Carousel, CustomVideo, DoubleImage, SocialMediaCards, TakeAction, YoutubeEmbed } from "components";
 import Image from "next/image";
 import { colors } from 'utils';
 
@@ -78,13 +78,23 @@ export default function HomePage() {
         margin: 'auto',
         transformOrigin: 'top',
       }}>
-      <Logo
-        style={{
-          margin: 'auto',
+
+      <AspectRatioBox
+        ratio={577 / 96}
+        sx={{
+          mx: 'auto',
           marginTop: '38.31px',
           marginBottom: '40.69px',
-        }}
-      />
+          width: '183.95px',
+        }}>
+        <Image
+          src='logo.png'
+          alt='1'
+          layout='fill'
+          unoptimized={true}
+          id="mandatory"
+        />
+      </AspectRatioBox>
 
       <Typography
         variant='h1'
@@ -221,14 +231,20 @@ export default function HomePage() {
         />
       </AspectRatioBox>
 
-      <Logo
-        width='101.47px'
-        height='13.02px'
-        style={{
-          margin: 'auto',
-          marginBottom: '31.88px',
-        }}
-      />
+      <AspectRatioBox
+        ratio={577 / 96}
+        sx={{
+          mx: 'auto',
+          mb: '31.88px',
+          width: '141.47px',
+        }}>
+        <Image
+          src='logo.png'
+          alt='1'
+          layout='fill'
+          unoptimized={true}
+        />
+      </AspectRatioBox>
 
       <Typography
         sx={{
