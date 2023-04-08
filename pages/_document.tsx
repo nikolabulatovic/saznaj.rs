@@ -76,7 +76,7 @@ const scriptTxt = `
     }
   );
 })();
-`
+`;
 
 export default function Document() {
   const coverStyles = `
@@ -95,14 +95,15 @@ export default function Document() {
   return (
     <Html
       lang='en'
-      style={{
-        touchAction: 'pan-x pan-y !important',
-        '-webkit-text-size-adjust': 'none',
-        '-ms-text-size-adjust': 'none',
-        overflow: 'hidden',
-        userSelect: 'none',
-      } as HtmlHTMLAttributes<HTMLHtmlElement>}
-    >
+      style={
+        {
+          touchAction: 'pan-x pan-y !important',
+          '-webkit-text-size-adjust': 'none',
+          '-ms-text-size-adjust': 'none',
+          overflow: 'hidden',
+          userSelect: 'none',
+        } as HtmlHTMLAttributes<HTMLHtmlElement>
+      }>
       <title>saznaj.rs</title>
       <Head>
         <script dangerouslySetInnerHTML={{ __html: scriptTxt }} />
@@ -147,26 +148,32 @@ export default function Document() {
           content='U industrijama u kojima se životinje iskorišćavaju, nikad nam nije prikazana istina o njihovim životima.'
         />
         <meta name='og:url' content='saznaj.rs' />
-        <meta property="og:image" content="http://saznaj.rs/preview.png" />
-        <meta property="og:image:secure_url" content="https://saznaj.rs/preview.png" />
-        <meta property="og:image:type" content="image/png" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta name='og:site_name' content='saznaj.rs' />
-        <meta name='Twiter:card' content='Photo' />
-        <meta name='Twiter:title' content='saznaj.rs' />
+        <meta property='og:image' content='http://saznaj.rs/preview.png' />
         <meta
-          name='Twiter:description'
+          property='og:image:secure_url'
+          content='https://saznaj.rs/preview.png'
+        />
+        <meta property='og:image:type' content='image/png' />
+        <meta property='og:image:width' content='1200' />
+        <meta property='og:image:height' content='630' />
+        <meta name='og:site_name' content='saznaj.rs' />
+        <meta property='og:thumbnail' content='https://saznaj.rs/preview.png' />
+        <meta name='Twitter:card' content='Photo' />
+        <meta name='Twitter:title' content='saznaj.rs' />
+        <meta
+          name='Twitter:description'
           content='U industrijama u kojima se životinje iskorišćavaju, nikad nam nije prikazana istina o njihovim životima.'
         />
-        <meta name='Twiter:url' content='saznaj.rs' />
-        <meta name='Twiter:image' content='https://saznaj.rs/preview.png' />
+        <meta name='Twitter:url' content='saznaj.rs' />
+        <meta name='Twitter:image' content='https://saznaj.rs/preview.png' />
         <meta name='keywords' content='saznaj,veganstvo,zivotinje'></meta>
         <meta name='author' content='saznaj.rs' />
         <meta
           name='description'
           content='U industrijama u kojima se životinje iskorišćavaju, nikad nam nije prikazana istina o njihovim životima.'></meta>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"></meta>
+        <meta
+          name='viewport'
+          content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'></meta>
         <link rel='icon' type='image/png' href='./favicon.png' />
         <link rel='apple-touch-icon' sizes='180x180' href='./touch.png' />
         <link rel='shortcut icon' href='./favicon.png'></link>
