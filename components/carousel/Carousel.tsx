@@ -213,25 +213,33 @@ export const Carousel = () => {
 
   useEffect(
     () => {
-      if (slider) {
-        if (stopAutoplay && autoplayInterval) {
-          clearInterval(autoplayInterval);
-        } else {
-          const interval = setInterval(
-            () => {
-              slider.go('>');
-            },
-            4200
-          );
-          setAutoplayInterval(interval);
-        }
+      if (!slider) {
+        return () => {};
       }
 
+      const interval = setInterval(
+        () => {
+          slider.go('>');
+        },
+        4200
+      );
+
+      setAutoplayInterval(interval);
+
       return () => {
-        clearInterval(autoplayInterval);
+        clearInterval(interval);
       };
     },
     [slider, stopAutoplay]
+  );
+
+  useEffect(
+    () => {
+      if (stopAutoplay && autoplayInterval) {
+        clearInterval(autoplayInterval);
+      }
+    },
+    [autoplayInterval, stopAutoplay]
   );
 
   const onButtonClick = (name: string) => {
