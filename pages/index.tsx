@@ -111,6 +111,7 @@ export default function HomePage() {
           url2='2.png'
           background='rgba(29, 28, 46, 0.9)'
           name='Krava'
+          color={colors.text.clickToFindOut.cow}
         />
 
         <Typography sx={darkColorParagraph}>
@@ -123,6 +124,7 @@ export default function HomePage() {
           url2='4.png'
           background='rgba(43, 41, 38, 0.9)'
           name='Prase'
+          color={colors.text.clickToFindOut.dog}
         />
 
         <Typography sx={darkColorParagraph}>

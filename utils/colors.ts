@@ -8,7 +8,10 @@ export const colors = {
     primary: '#FFFFFF',
     socialCardType: '#5E5857',
     socialCardName: '#AEAEAE',
-    clickToFindOut: '#9593B659',
+    clickToFindOut: {
+      cow: '#9593B659',
+      dog: '#B6A29359',
+    },
     sectionDescription: '#837676',
     acknowledgementsHeading: '#443433',
     acknowledgementsContent: '#554746',
