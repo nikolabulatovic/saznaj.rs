@@ -108,6 +108,9 @@ export default function Document() {
           }
         `}</style>
         <meta name='theme-color' content='#272020' />
+        <link rel="icon" type="image/png" href=".//favicon.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="./touch.png" />
+        <link rel="shortcut icon" href="./favicon.png"></link>
       </Head>
       <body
         style={{
