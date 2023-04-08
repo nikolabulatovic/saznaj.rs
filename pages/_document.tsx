@@ -100,7 +100,6 @@ export default function Document() {
           touchAction: 'pan-x pan-y !important',
           '-webkit-text-size-adjust': 'none',
           '-ms-text-size-adjust': 'none',
-          overflow: 'hidden',
           userSelect: 'none',
         } as HtmlHTMLAttributes<HTMLHtmlElement>
       }>
