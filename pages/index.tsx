@@ -1,9 +1,17 @@
-import { Box, Typography } from "@mui/material";
-import { AspectRatioBox, Carousel, CustomVideo, DoubleImage, SocialMediaCards, TakeAction, YoutubeEmbed } from "components";
-import Image from "next/image";
+import { Box, Typography } from '@mui/material';
+import {
+  AspectRatioBox,
+  Carousel,
+  CustomVideo,
+  DoubleImage,
+  SocialMediaCards,
+  TakeAction,
+  YoutubeEmbed,
+} from 'components';
+import Image from 'next/image';
 import { colors } from 'utils';
 
-import styles from "./index.module.css";
+import styles from './index.module.css';
 
 const paragraphCommon = {
   color: '#4E4646',
@@ -13,13 +21,13 @@ const paragraphCommon = {
   lineHeight: '18px',
   letterSpacing: '0.03em',
   userSelect: 'none',
-}
+};
 
 const darkColorParagraph = {
   ...paragraphCommon,
   fontFamily: 'Bio Sans',
   margin: '0px 16.32px 0px 22.94px',
-}
+};
 
 export default function HomePage() {
   const heading1Style = {
@@ -69,7 +77,7 @@ export default function HomePage() {
     color: colors.text.sectionDescription,
     margin: '0px 6.55px 0px 6.55px',
     userSelect: 'none',
-  }
+  };
 
   return (
     <Box
@@ -82,7 +90,6 @@ export default function HomePage() {
         margin: 'auto',
         transformOrigin: 'top',
       }}>
-
       <AspectRatioBox
         ratio={577 / 96}
         sx={{
@@ -96,7 +103,7 @@ export default function HomePage() {
           alt='1'
           layout='fill'
           unoptimized={true}
-          id="mandatory"
+          id='mandatory'
         />
       </AspectRatioBox>
 
@@ -147,10 +154,12 @@ export default function HomePage() {
         <Typography sx={darkColorParagraph}>
           Baš kao tvoj pas ili mačka, životinje u industrijama mesa, mleka i
           jaja osećaju bol i ne žele da budu nepravedno ubijene.{' '}
-          <Typography component='span' sx={{
-            ...paragraphCommon,
-            fontFamily: 'Bio Sans Bold'
-          }}>
+          <Typography
+            component='span'
+            sx={{
+              ...paragraphCommon,
+              fontFamily: 'Bio Sans Bold',
+            }}>
             Životinje nisu naše da sa njima radimo šta god hoćemo.
           </Typography>
         </Typography>
@@ -214,7 +223,7 @@ export default function HomePage() {
       </Typography>
 
       <Typography sx={sectionDescriptionStyle}>
-        Vegnanstvo nije sekta, ali prati naše vodiče!
+        Veganstvo nije sekta, ali prati naše vodiče!
       </Typography>
 
       <SocialMediaCards
@@ -245,12 +254,7 @@ export default function HomePage() {
           mb: '31.88px',
           width: '141.47px',
         }}>
-        <Image
-          src='logo.png'
-          alt='1'
-          layout='fill'
-          unoptimized={true}
-        />
+        <Image src='logo.png' alt='1' layout='fill' unoptimized={true} />
       </AspectRatioBox>
 
       <Typography
