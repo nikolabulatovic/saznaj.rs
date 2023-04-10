@@ -10,6 +10,8 @@ declare global {
 
 const scriptTxt = `
 (function () {
+  const supportsZoom = document.createElement("detect").style.zoom === "";
+
   function scalePage() {
     const element = document.getElementById('page');
     if (element) {
@@ -24,7 +26,11 @@ const scriptTxt = `
         scaleFactor = maxFactor;
       }
 
-      element.style.zoom = scaleFactor;
+      if (supportsZoom) {
+        element.style.zoom = scaleFactor;
+      } else {
+        element.style.transform = 'scale(' + scaleFactor + ')';
+      }
     }
   }
 
