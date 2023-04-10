@@ -97,7 +97,6 @@ const glideStyle = {
 const slideItemStyle = {
   cursor: 'pointer',
   boxShadow: '0px 4px 38px rgba(149, 136, 136, 0.25)',
-  width: '345px !important',
   height: '100%',
   flexDirection: 'column',
   flexShrink: 0,
@@ -127,7 +126,7 @@ const slideItemStyle = {
     '& > p': {
       fontFamily: 'Bio Sans',
       fontSize: '0.92rem',
-      color: colors.slider.slideSubtext
+      color: colors.slider.slideSubtext,
     },
   },
 
@@ -197,61 +196,46 @@ export const Carousel = () => {
   const [slider, setSlider] = useState<any>(null);
   const [stopAutoplay, setStopAutoplay] = useState(false);
 
-  useEffect(
-    () => {
-      const glide = new Glide(
-        '.glide',
-        { autoplay: 4200 }
-      ).mount({
-        Controls,
-        Breakpoints,
-      });
-      setSlider(glide);
-    },
-    []
-  )
+  useEffect(() => {
+    const glide = new Glide('.glide', { autoplay: 4200 }).mount({
+      Controls,
+      Breakpoints,
+    });
+    setSlider(glide);
+  }, []);
 
-  useEffect(
-    () => {
-      if (!slider) {
-        return () => {};
-      }
+  useEffect(() => {
+    if (!slider) {
+      return () => {};
+    }
 
-      const interval = setInterval(
-        () => {
-          slider.go('>');
-        },
-        4200
-      );
+    const interval = setInterval(() => {
+      slider.go('>');
+    }, 4200);
 
-      setAutoplayInterval(interval);
+    setAutoplayInterval(interval);
 
-      return () => {
-        clearInterval(interval);
-      };
-    },
-    [slider, stopAutoplay]
-  );
+    return () => {
+      clearInterval(interval);
+    };
+  }, [slider, stopAutoplay]);
 
-  useEffect(
-    () => {
-      if (stopAutoplay && autoplayInterval) {
-        clearInterval(autoplayInterval);
-      }
-    },
-    [autoplayInterval, stopAutoplay]
-  );
+  useEffect(() => {
+    if (stopAutoplay && autoplayInterval) {
+      clearInterval(autoplayInterval);
+    }
+  }, [autoplayInterval, stopAutoplay]);
 
   const onButtonClick = (name: string) => {
     setStopAutoplay(true);
     window.mixpanel.track(`Slider Button Clicked - ${name}`);
-  }
+  };
 
   return (
     <Box className='glide' sx={glideStyle}>
       <div className='glide__track' data-glide-el='track'>
         <ul className='glide__slides'>
-          {items.map((item) =>
+          {items.map((item) => (
             <ListItem
               className='glide__slide'
               key={item.title}
@@ -278,16 +262,15 @@ export const Carousel = () => {
                   <p>{item.subtext}</p>
                 </div>
               </CustomVideo>
-            </ListItem>)}
+            </ListItem>
+          ))}
         </ul>
       </div>
       <Box
         className='glide__bullets'
         data-glide-el='controls[nav]'
         sx={sliderBullets}>
-        {items.map((
-          item, index
-        ) =>
+        {items.map((item, index) => (
           <Button
             className='glide__bullet'
             data-glide-dir={`=${index}`}
@@ -297,7 +280,8 @@ export const Carousel = () => {
             <AspectRatioBox ratio={1.777777} sx={slideImageStyle}>
               <img src={item.imageUrl} alt={item.title} />
             </AspectRatioBox>
-          </Button>)}
+          </Button>
+        ))}
       </Box>
     </Box>
   );
