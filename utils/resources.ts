@@ -48,6 +48,13 @@ export const socialMediaCards: Array<SocialMediaCardInfo> = [
     isDiagonal: true,
   },
   {
+    name: 'Fitness bliznakinje',
+    description: '',
+    type: 'Instagram',
+    link: 'https://www.instagram.com/fitness.bliznakinje/',
+    image: 'fitnessbliznakinje.png',
+  },
+  {
     name: 'Moja Vegan Kuhinja',
     description: 'Razmena recepata',
     type: 'Facebook',
