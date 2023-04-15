@@ -71,7 +71,11 @@ export const DoubleImage = ({
 
   const onHiddenClick = () => {
     setShowImage(true);
-    window.mixpanel.track(`Hidden Image Clicked - ${name}`);
+    if (showImage) {
+      window.mixpanel.track(`Shown Image Clicked - ${name}`);
+    } else {
+      window.mixpanel.track(`Hidden Image Clicked - ${name}`);
+    }
   };
 
   return (
