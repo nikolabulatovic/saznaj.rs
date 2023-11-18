@@ -251,11 +251,41 @@ export default function HomePage() {
         ratio={577 / 96}
         sx={{
           mx: 'auto',
-          mb: '31.88px',
+          mb: '21.88px',
           width: '141.47px',
         }}>
         <Image src='logo.png' alt='1' layout='fill' unoptimized={true} />
       </AspectRatioBox>
+
+      <Typography
+        sx={{
+          fontFamily: 'ABChanel Corpo',
+          fontStyle: 'normal',
+          fontWeight: 400,
+          fontSize: '9px',
+          lineHeight: '18px',
+          mb: '21.88px',
+          textAlign: 'center',
+          letterSpacing: '0.05em',
+          color: colors.text.acknowledgementsContent,
+          userSelect: 'none',
+        }}>
+        Piši nam na{' '}
+        <Typography
+          component='span'
+          sx={{
+            fontFamily: 'ABChanel Corpo',
+            fontStyle: 'normal',
+            fontWeight: 700,
+            fontSize: '9px',
+            lineHeight: '18px',
+            textAlign: 'center',
+            letterSpacing: '0.05em',
+            color: colors.text.acknowledgementsHeading,
+          }}>
+          saznaj.rs@proton.me
+        </Typography>
+      </Typography>
 
       <Typography
         sx={{
