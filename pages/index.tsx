@@ -12,6 +12,7 @@ import Image from 'next/image';
 import { colors } from 'utils';
 
 import styles from './index.module.css';
+import { ChildrensStory } from 'components/childrens-story';
 
 const paragraphCommon = {
   color: '#4E4646',
@@ -232,6 +233,24 @@ export default function HomePage() {
           marginBottom: '71.88px',
         }}
       />
+
+      <Typography
+        sx={{
+          ...heading2Style,
+          marginBottom: '10.56px',
+        }}>
+        Za decu
+      </Typography>
+
+      <Typography
+        sx={{
+          ...sectionDescriptionStyle,
+          marginBottom: '13.75px',
+        }}>
+        Edukativna vegan basna za decu stariju od 6 godina
+      </Typography>
+
+      <ChildrensStory sx={{ marginBottom: '103.97px' }} />
 
       <AspectRatioBox
         ratio={889 / 337}
