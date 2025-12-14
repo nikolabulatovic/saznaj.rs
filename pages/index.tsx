@@ -247,7 +247,7 @@ export default function HomePage() {
           ...sectionDescriptionStyle,
           marginBottom: '13.75px',
         }}>
-        Edukativna vegan basna za decu stariju od 6 godina
+        Edukativna audio-video vegan basna za decu stariju od 6 godina
       </Typography>
 
       <ChildrensStory sx={{ marginBottom: '103.97px' }} />
