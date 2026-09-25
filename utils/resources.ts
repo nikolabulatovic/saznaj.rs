@@ -177,12 +177,17 @@ export interface TakeActionInfo {
 export const takeActionBanners = [
   {
     image: 'veganizazov.jpg',
-    link: 'https://vegan-izazov22.com/',
+    link: 'https://www.instagram.com/veganizazov22/',
     name: 'Vegan Izazov 22',
   },
   {
     image: 'govegan.jpg',
     link: 'https://govegan.rs/',
     name: 'Go Vegan',
+  },
+  {
+    image: 'happycow.png',
+    link: 'https://www.happycow.net/',
+    name: 'Happy Cow',
   },
 ]

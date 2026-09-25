@@ -19,7 +19,7 @@ export const TakeAction = ({ sx }: BoxProps) => {
           key={name}
           sx={{
             position: 'relative',
-            height: '69px',
+            height: '70px',
           }}>
           <Link href={link} target='_blank'>
             <Box
@@ -28,7 +28,7 @@ export const TakeAction = ({ sx }: BoxProps) => {
               }
               sx={{
                 width: '100%',
-                height: '69px',
+                height: '70px',
                 position: 'absolute',
               }}>
               <Image src={image} alt={name} layout='fill' unoptimized={true} />
